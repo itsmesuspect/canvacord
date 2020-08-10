@@ -628,7 +628,7 @@ class Canvacord {
         ctx.font = `26px ${font}`;
         ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
         ctx.textAlign = 'center';
-        if (discrim) ctx.fillText(`#${discrim}`, nameWidth + 20 + 335, 164);
+        if (discrim) ctx.fillText(`#${discrim}`, nameWidth + 20 + 305, 164);
 
         ctx.font = `bold 36px ${font}`;
         ctx.fillStyle = color || '#FFFFFF';
@@ -637,13 +637,13 @@ class Canvacord {
         ctx.fillText(level, 934 - 64, 82);
         ctx.font = `bold 26px ${font}`;
         ctx.fillStyle = color || '#FFFFFF';
-        ctx.fillText('LEVEL', 934 - 64 - levelWidth - 16, 82);
+        ctx.fillText('LEVEL', 934 - 64 - levelWidth - 8, 82);
         const leveltextWidth = ctx.measureText(`LEVEL`).width
 
         ctx.font = `bold 36px ${font}`;
         ctx.fillStyle = '#FFFFFF';
         ctx.textAlign = 'end';
-        ctx.fillText(rank, 934 - 64 - levelWidth - 16 - leveltextWidth - 16, 82);
+        ctx.fillText(rank, 934 - 64 - levelWidth - 8 - leveltextWidth - 16, 82);
         const rankWidth = ctx.measureText(rank).width
         ctx.font = `bold 26px ${font}`;
         ctx.fillStyle = '#FFFFFF';
@@ -652,18 +652,18 @@ class Canvacord {
             934 -
                 64 -
                 levelWidth -
-                16 -
+                8 -
                 leveltextWidth -
                 16 -
                 rankWidth -
-                16,
+                8,
             82
         );
 
         ctx.font = `bold 36px ${font}`;
         ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
         ctx.textAlign = 'start';
-        ctx.fillText('/ ' + Util.toAbbrev(neededXP) + 'XP', 670 + ctx.measureText(Util.toAbbrev(currentXP)).width + 15, 164);
+        ctx.fillText('/ ' + Util.toAbbrev(neededXP) + ' XP', 670 + ctx.measureText(Util.toAbbrev(currentXP)).width + 15, 164);
         ctx.fillStyle = color || '#FFFFFF';
         ctx.fillText(Util.toAbbrev(currentXP), 670, 164);
 
